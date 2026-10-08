@@ -380,12 +380,30 @@ footer {
 }
 
 @media (max-width: 750px) {
-  main {
-    grid-template-columns: 1fr;
+  html,
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
   }
+  main {
+    display: flex;
 
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+  .main-content {
+    order: 1;
+    height: auto;
+    width: 100%;
+  }
   aside {
-    display: none;
+    display: flex;
+    width: 100%;
+    order: 2;
+    flex-direction: column;
+    height: auto;
   }
 
   .language-grid {
